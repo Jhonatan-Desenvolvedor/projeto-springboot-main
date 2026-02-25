@@ -10,7 +10,7 @@ import com.example.meu_primeiro_springboot.service.VeiculoService;
 
 @RestController
 @RequestMapping("/api/veiculos")
-@CrossOrigin(origins = "https://oficinajbt.netlify.app", allowCredentials = "true")
+@CrossOrigin(origins = "*") 
 public class VeiculoController {
 
     @Autowired

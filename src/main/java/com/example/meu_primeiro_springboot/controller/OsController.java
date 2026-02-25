@@ -13,7 +13,8 @@ import com.example.meu_primeiro_springboot.service.OsService;
 
 @RestController
 @RequestMapping("/api/ordens-servico")
-@CrossOrigin(origins = "https://oficinajbt.netlify.app", allowCredentials = "true")
+@CrossOrigin(origins = "*") 
+
 public class OsController {
 
     @Autowired

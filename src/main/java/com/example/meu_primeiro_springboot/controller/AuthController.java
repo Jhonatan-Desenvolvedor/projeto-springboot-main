@@ -23,7 +23,6 @@ import java.util.Optional;
  */
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin(origins = "https://oficinajbt.netlify.app", allowCredentials = "true")
 public class AuthController {
 
     private final UsuarioService usuarioService;

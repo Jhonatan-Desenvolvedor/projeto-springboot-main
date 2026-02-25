@@ -12,7 +12,7 @@ import com.example.meu_primeiro_springboot.service.ServicoService;
 
 @RestController
 @RequestMapping("/api/servicos")
-@CrossOrigin(origins = "https://oficinajbt.netlify.app", allowCredentials = "true")
+@CrossOrigin(origins = "*") 
 public class ServicoController {
 
     @Autowired

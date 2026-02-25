@@ -18,7 +18,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/api/produtos")
-@CrossOrigin(origins = "https://oficinajbt.netlify.app", allowCredentials = "true")
+@CrossOrigin(origins = "*") 
 public class ProdutoController {
 
     @Autowired
