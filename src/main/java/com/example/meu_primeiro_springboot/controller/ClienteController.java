@@ -14,7 +14,7 @@ import com.example.meu_primeiro_springboot.service.ClienteService;
 
 @RestController
 @RequestMapping("/api/clientes")
-@CrossOrigin(origins = "*") // Permite o Angular conectar
+@CrossOrigin(origins = "https://oficinajbt.netlify.app", allowCredentials = "true")
 public class ClienteController {
 
     @Autowired

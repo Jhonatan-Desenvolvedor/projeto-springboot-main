@@ -18,7 +18,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/api/produtos")
-@CrossOrigin(origins = "*") // Permite o Angular conectar
+@CrossOrigin(origins = "https://oficinajbt.netlify.app", allowCredentials = "true")
 public class ProdutoController {
 
     @Autowired

@@ -10,7 +10,7 @@ import com.example.meu_primeiro_springboot.service.VeiculoService;
 
 @RestController
 @RequestMapping("/api/veiculos")
-@CrossOrigin("*") // Garante que o Angular consiga acessar sem erro de CORS
+@CrossOrigin(origins = "https://oficinajbt.netlify.app", allowCredentials = "true")
 public class VeiculoController {
 
     @Autowired

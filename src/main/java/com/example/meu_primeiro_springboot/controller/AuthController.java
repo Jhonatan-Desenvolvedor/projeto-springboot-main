@@ -5,6 +5,7 @@ import com.example.meu_primeiro_springboot.security.JwtUtil;
 import com.example.meu_primeiro_springboot.service.UsuarioService;
 import jakarta.persistence.Entity;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,7 @@ import java.util.Optional;
  */
 @RestController
 @RequestMapping("/auth")
+@CrossOrigin(origins = "https://oficinajbt.netlify.app", allowCredentials = "true")
 public class AuthController {
 
     private final UsuarioService usuarioService;

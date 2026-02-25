@@ -13,7 +13,7 @@ import com.example.meu_primeiro_springboot.service.OsService;
 
 @RestController
 @RequestMapping("/api/ordens-servico")
-@CrossOrigin(origins = "*") // Permite o Angular conectar // origins = {"https://seusite.com", "https://app.seusite.com"}
+@CrossOrigin(origins = "https://oficinajbt.netlify.app", allowCredentials = "true")
 public class OsController {
 
     @Autowired
