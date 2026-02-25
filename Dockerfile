@@ -1,10 +1,16 @@
-# Estágio de Build
-FROM maven:3.9.6-eclipse-temurin-21 AS build
-COPY . .
-RUN mvn clean package -DskipTests
+FROM ubuntu:latest AS buid
 
-# Estágio de Execução
-FROM eclipse-temurin:21-jdk-jammy
-COPY --from=build /target/*.jar app.jar
+RUN apt-get update
+RUN apt-get install
+COPY . .
+
+RUN apt-get install maven -y
+RUN mvn clean install
+
+FROM openjdk:21-jdk-slim
+
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","app.jar"]
+
+COPY --from=build /target/*.jar app.jar
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
